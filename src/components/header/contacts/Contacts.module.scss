@@ -1,0 +1,35 @@
+.contacts {
+    margin-left: 30px;
+    display: flex;
+    color: #CFCFCF;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon {
+    background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.information {
+    padding-left: 10px;
+}
+
+.title {
+    color: #CFCFCF;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 400;
+}
+
+.phone {
+    color: #ffffff;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 600;
+}

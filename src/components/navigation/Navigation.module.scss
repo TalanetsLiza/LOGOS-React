@@ -1,0 +1,31 @@
+.navigation {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 1272px;
+    margin: 0 auto;
+    height: 80px;
+}
+
+.item {
+    text-decoration: none;
+    font-family: "Gilroy";
+    font-size: 18px;
+    font-weight: 500;
+    color: #CFCFCF;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+
+    &:hover {
+        border-bottom-color: #618967;
+    }
+
+    &:active {
+        opacity: .9;
+        border-bottom-color: #618967;
+    }
+}

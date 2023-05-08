@@ -1,0 +1,43 @@
+.button {
+    background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    margin-right: 70px;
+    margin-left: auto;
+
+    &:hover {
+        opacity: .9;
+    }
+
+    &:active {
+        opacity: .5;
+    }
+}
+
+.cart {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    padding: 10px 22px;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);;
+}
+
+.quantity {
+    color: #403C3B;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 14px;
+    background: #FFFFFF;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 14px 13px;
+}

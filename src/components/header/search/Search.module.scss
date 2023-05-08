@@ -1,0 +1,35 @@
+.form {
+    background: #504B4A;
+    border-radius: 10px;
+    box-shadow: 0px 30px 60px rgba(34, 31, 32, 0.2);
+    display: flex;
+    align-items: center;
+    width: 555px;
+    height: 52px;
+    box-sizing: border-box;
+}
+
+.locationIcon {
+    padding: 14px;
+}
+
+.input {
+    background: #504B4A;
+    border: none;
+    color: #CFCFCF;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    width: 100%;
+    outline: none;
+    &::placeholder {
+        color: #CFCFCF;
+    }
+}
+
+.button {
+    background: #504B4A;
+    border: none;
+    cursor: pointer;
+    margin-right: 14px;
+}
