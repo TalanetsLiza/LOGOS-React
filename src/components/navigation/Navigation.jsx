@@ -1,15 +1,17 @@
+import t from "../../assets/translations/translations";
+import pageUrls from "../../constants/pageUrls";
 import styles from "./Navigation.module.scss";
 import { Link } from "react-router-dom";
 
-const links = [
-    { to: "/", text: "Холодные закуски" },
-    { to: "/", text: "Горячие закуски" },
-    { to: "/", text: "Мясные блюда" },
-    { to: "/", text: "Супы" },
-    { to: "/", text: "Рыбные блюда" },
-    { to: "/", text: "Гриль меню" },
-    { to: "/", text: "Фирменные блюда" },
-    { to: "/", text: "Напитки" },
+ export const links = [
+    { to: pageUrls.catalogColdSnacks, text: t.category["cold-snacks"] },
+    { to: pageUrls.catalogHotSnacks, text: "Горячие закуски" },
+    { to: pageUrls.meatDishes, text: "Мясные блюда" },
+    { to: pageUrls.soups, text: "Супы" },
+    { to: pageUrls.fishDishes, text: "Рыбные блюда" },
+    { to: pageUrls.grillMenu, text: "Гриль меню" },
+    { to: pageUrls.signatureDishes, text: "Фирменные блюда" },
+    { to: pageUrls.drinks, text: "Напитки" },
 ];
 
 const Navigation = () => {

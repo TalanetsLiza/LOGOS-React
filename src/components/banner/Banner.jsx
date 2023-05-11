@@ -1,3 +1,4 @@
+import t from "../../assets/translations/translations";
 import styles from "./Banner.module.scss";
 
 const Banner = () => {
@@ -5,18 +6,18 @@ const Banner = () => {
         <section className={styles.banner}>
             <div className={styles.content}>
                 <div className={styles.title}>
-                    Доставка ВКУСНЕЙШИХ
+                    {t.banner.title1}
                     <br />
-                    БЛЮд за 60 минут
+                    {t.banner.title2}
                     
                     <div className={styles.titleShadow}>
-                        Доставка ВКУСНЕЙШИХ
+                        {t.banner.title1}
                         <br />
-                        БЛЮд за 60 минут
+                        {t.banner.title2}
                     </div>
                 </div>
                 <div className={styles.title2}>
-                    Ещё не пробовал?
+                    {t.banner.description}
                 </div>
             </div>
         </section>

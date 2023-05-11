@@ -1,0 +1,25 @@
+.container {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-family: "Gilroy";
+    padding-left: 20px;
+    border-left: 4px solid #618967;
+    margin-left: 87px;
+    margin-bottom: 50px;
+}
+
+.container__cards {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}

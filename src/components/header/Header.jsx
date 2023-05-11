@@ -1,16 +1,20 @@
 import styles from "./Header.module.scss";
-import Cart from "./cart/Cart";
-import Logo from "./logo/Logo";
+import Logo from "../logo/Logo";
 import Search from "./search/Search";
 import Contacts from "./contacts/Contacts";
+import CartButton from "./cartButton/CartButton";
 
 const Header = () => {
     return (
         <header className={styles.header}>
-            <Logo />
+            <div className={styles.logo}>
+                <Logo />
+            </div>
             <Search />
             <Contacts />
-            <Cart />
+            <div className={styles.button}>
+                <CartButton />
+            </div>
         </header>
     );
 }

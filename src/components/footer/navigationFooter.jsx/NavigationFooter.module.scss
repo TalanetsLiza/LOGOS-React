@@ -1,0 +1,33 @@
+
+.ul {
+    display: flex;
+    padding-left: 85px;
+}
+
+.li {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+@media (max-width: 1165px) {
+    .ul {
+        padding-left: 40px;
+    }
+    
+    .li {
+        font-size: 18px;
+        padding-right: 20px;
+    }
+}
+
+@media (max-width: 800px) {
+    .navigation {
+        display: none;
+    }
+}

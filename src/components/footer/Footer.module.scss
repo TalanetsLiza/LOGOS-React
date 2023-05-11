@@ -1,0 +1,38 @@
+.footer {
+    background: linear-gradient(270.7deg, #44403F 0.4%, #211F20 100%);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 25px 0 28px 40px;
+}
+
+.button {
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 55px;
+}
+
+@media (max-width: 800px) {
+    .container {
+        align-items: center;
+        justify-content: center;
+        padding-left: 0;
+    }
+}

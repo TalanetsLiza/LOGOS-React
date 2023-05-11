@@ -6,3 +6,23 @@
     align-items: center;
     flex-wrap: wrap;
 }
+
+.logo {
+    margin-left: 98px;
+    margin-right: 72px;
+}
+
+.button {
+    margin-right: 70px;
+    margin-left: auto;
+}
+
+@media (max-width: 1260px) {
+    .logo {
+        margin-left: 40px;
+        margin-right: 20px;
+    }
+    .button {
+        margin-right: 40px;
+    }
+}

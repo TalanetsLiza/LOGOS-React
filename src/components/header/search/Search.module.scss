@@ -33,3 +33,16 @@
     cursor: pointer;
     margin-right: 14px;
 }
+
+@media (max-width: 1160px) {
+    .form {
+        width: 455px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .form {
+        width: 400px;
+    }
+}
+

@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import styles from "./Logo.module.scss";
 
 const Logo = () => {
     return (
-        <div className={styles.logo}>
+        <Link className={styles.logo}>
             LOGOS
-        </div>
+        </Link>
     );
 }
 

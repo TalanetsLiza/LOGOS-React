@@ -33,3 +33,9 @@
     line-height: 20px;
     font-weight: 600;
 }
+
+@media (max-width: 970px) {
+    .contacts {
+        display: none;
+    }
+}

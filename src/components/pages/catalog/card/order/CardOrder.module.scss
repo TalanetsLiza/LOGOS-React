@@ -1,0 +1,68 @@
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.price {
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    font-family: "Gilroy";
+}
+
+.button {
+    background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+        opacity: .9;
+    }
+
+    &:active {
+        opacity: .5;
+    }
+}
+
+.cart {
+    font-family: "Gilroy";
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+    padding: 10px 10px;
+}
+
+.icon {
+    padding-right: 10px;
+
+}
+
+.buttonCount {
+    background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+    border-radius: 20px;
+    padding: 8px 22px;
+    font-size: 30px;
+    border: none;
+    color: #FFFFFF;
+    cursor: pointer;
+    outline: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+
+    &:hover {
+        opacity: .9;
+    }
+
+    &:active {
+        opacity: .5;
+    }
+
+}

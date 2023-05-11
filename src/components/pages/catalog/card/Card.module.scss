@@ -1,0 +1,48 @@
+.card {
+    background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    max-width: 267px;
+    cursor: pointer;
+}
+
+.container {
+    padding: 15px 16px 28px 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;  
+}
+
+.title {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 27px;
+    font-family: "Gilroy";
+}
+
+.weight {
+    color: #FFFFFF;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    font-family: "Gilroy";
+}
+
+.description {
+    color: #CFCFCF;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 17px;
+    font-family: "Gilroy";
+    padding-bottom: 15px;
+    margin-bottom: auto;
+}

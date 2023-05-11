@@ -1,0 +1,52 @@
+.container {
+    background-image: url(../../assets/images/banner/bannerAbout.png);
+    background-color: linear-gradient(90deg, #211F20 0%, rgba(68, 64, 63, 0) 100%);
+    max-width: 1365px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: -150px;
+}
+
+.block {
+    display: flex;
+    flex-direction: column;
+    max-width: 563px;
+    padding: 100px 160px 100px 70px;
+}
+
+.title {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    color: #FFFFFF;
+    padding-bottom: 26px;
+}
+
+.description {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 25px;
+    color: #CFCFCF;
+    padding-bottom: 60px;
+}
+
+.button {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(2.5px);
+    border-radius: 10px;
+    max-width: 223px;
+    font-family: "Gilroy";
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFFFFF;
+    padding: 22px 25px 22px 65px;
+    cursor: pointer;
+}
