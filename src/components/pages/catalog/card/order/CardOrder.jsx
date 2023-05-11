@@ -37,8 +37,8 @@ const CardOrder = ({ dataItem }) => {
     }
 
     return (
-        <div className={styles.container} onClick={removeFromBusket}>
-            <button className={styles.buttonCount}>
+        <div className={styles.container}>
+            <button className={styles.buttonCount} onClick={removeFromBusket}>
                 -
             </button>
             <div className={styles.price}>
