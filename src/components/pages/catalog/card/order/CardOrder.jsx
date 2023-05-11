@@ -14,6 +14,10 @@ const CardOrder = ({ dataItem }) => {
         setCount((value) => value + 1);
     };
 
+    const removeFromBusket = () => {
+        setCount((value) => value - 1);
+    };
+
     if (count === 0) {
         return (
             <div className={styles.container}>
@@ -33,7 +37,7 @@ const CardOrder = ({ dataItem }) => {
     }
 
     return (
-        <div className={styles.container}>
+        <div className={styles.container} onClick={removeFromBusket}>
             <button className={styles.buttonCount}>
                 -
             </button>
