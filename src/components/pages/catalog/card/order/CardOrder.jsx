@@ -47,6 +47,7 @@ const CardOrder = ({ dataItem }) => {
             <button className={styles.buttonCount} onClick={addToBusket}>
                 +
             </button>
+            <div className={styles.count} >{count}</div>
         </div>
     );
 
