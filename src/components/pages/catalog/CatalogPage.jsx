@@ -10,7 +10,7 @@ const CatalogPage = () => {
 
     const data = menuData.filter((menuItem) => menuItem.category.includes(category));
 
-    console.log("Catalog", category, data);
+    // console.log("Catalog", category, data);
 
 
     return (

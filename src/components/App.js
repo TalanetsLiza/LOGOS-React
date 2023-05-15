@@ -13,8 +13,25 @@ import DeliveryPage from "./pages/delivery/DeliveryPage";
 import AboutPage from "./pages/about/AboutPage";
 import BannerContact from "./bannerContact/BannerContact";
 import BannerAbout from "./bannerAbout/BannerAbout";
+import { useEffect, useState } from "react";
 
 const App = () => {
+    const [weather, setWeather] = useState({});
+
+    useEffect( () => {
+        fetch("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m")
+        .then(response => response.json())
+        .then((data) => {
+            const dataWeather = {
+                city: "Warszawa",
+                temperature: data.current_weather.temperature,
+                units: data.hourly_units.temperature_2m,
+                time: data.current_weather.time,
+            }
+            setWeather(dataWeather);
+        });
+    },[])
+    
 
     const catalogByCategoryPath = `${pageUrls.catalog}/:category`;
     
@@ -35,7 +52,7 @@ const App = () => {
             </Routes>
             <BannerAbout />
             <BannerContact />
-            <Footer />
+            <Footer weather={weather}/>
         </div>
     );
 };
