@@ -29,15 +29,17 @@ const busketReducer = (state, action) => {
         case DECREASE_COUNT: {
             const { id } = action;
 
-            const newState = state.map((item) => {
-                if(item.id === id) {
-                    return {
-                        ...item,
-                        count: item.count - 1,
+            const newState = state
+                .map((item) => {
+                    if(item.id === id) {
+                        return {
+                            ...item,
+                            count: item.count - 1,
+                        };
                     };
-                };
-                return item;
-            });
+                    return item;
+                })
+                .filter((item) => item.count > 0);
 
             return newState;
         };
