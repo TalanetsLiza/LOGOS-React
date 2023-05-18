@@ -5,7 +5,7 @@ import Card from "./card/Card";
 import t from "../../../assets/translations/translations";
 
 
-const CatalogPage = () => {
+const CatalogPage = ({dispatch, state}) => {
     const { category } = useParams();
 
     const data = menuData.filter((menuItem) => menuItem.category.includes(category));
@@ -20,7 +20,7 @@ const CatalogPage = () => {
             </h2>
             <div className={styles.container__cards}>
                 {data.map((dataItem) => (
-                    <Card key={dataItem.id} dataItem={dataItem} />
+                    <Card key={dataItem.id} dataItem={dataItem} state={state} dispatch={dispatch} />
                 ))}
             </div>
         </div>

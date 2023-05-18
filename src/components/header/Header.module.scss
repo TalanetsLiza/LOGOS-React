@@ -1,15 +1,23 @@
 .header {
+    width: 100%;
+    margin: 0 auto;
+    background-color: #403C3B;
+}
+
+.container {
     max-width: 1440px;
-    height: 100px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
 }
 
+.menuMob {
+    display: none;
+}
+
 .logo {
-    margin-left: 98px;
-    margin-right: 72px;
+    margin: 38px 72px 36px 98px;
 }
 
 .button {
@@ -19,10 +27,36 @@
 
 @media (max-width: 1260px) {
     .logo {
-        margin-left: 40px;
+        margin-left: 50px;
         margin-right: 20px;
+        text-align: center;
     }
     .button {
-        margin-right: 40px;
+        margin-right: 30px;
+    }
+}
+
+@media (max-width: 900px) {
+  
+    .container {
+        justify-content: center;
+    }
+
+    .menuMob {
+        display: flex;
+        order: 1;
+    }
+
+    .logo {
+        order: 2;
+    }
+
+    .button {
+        order: 3;
+    }
+
+    .search {
+        order: 4;
+        margin-bottom: 13px;
     }
 }

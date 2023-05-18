@@ -222,9 +222,8 @@ const menuData = [
         image: {
             src: drinkAlcoholic,
             alt: "drink"
-        }
+        },
     },
-    
 ];
 
 export default menuData;

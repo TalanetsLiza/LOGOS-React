@@ -13,10 +13,15 @@ import DeliveryPage from "./pages/delivery/DeliveryPage";
 import AboutPage from "./pages/about/AboutPage";
 import BannerContact from "./bannerContact/BannerContact";
 import BannerAbout from "./bannerAbout/BannerAbout";
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
+import busketReducer from "../reducers/busketReducer/busketReducer";
+import busketInitialState from "../reducers/busketReducer/busketInitialState";
 
 const App = () => {
     const [weather, setWeather] = useState({});
+    const [isOpen, setOpen] = useState(false);
+    
+    const [state, dispatch] = useReducer(busketReducer, busketInitialState);
 
     useEffect( () => {
         fetch("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m")
@@ -37,13 +42,13 @@ const App = () => {
     
     return (
         <div className={styles.container}>
-            <Header />
+            <Header isOpen={isOpen} setOpen={setOpen} />
             <Routes>
                 <Route path={catalogByCategoryPath} element={<Banner />} />
             </Routes>
             <Navigation />
             <Routes>
-                <Route path={catalogByCategoryPath} element={<CatalogPage />} />
+                <Route path={catalogByCategoryPath} element={<CatalogPage state={state} dispatch={dispatch} />} />
                 <Route path={pageUrls.busket} element={<BusketPage />} />
                 <Route path={pageUrls.promotion} element={<PromotionPage />} />
                 <Route path={pageUrls.return} element={<ReturnPage />} />
@@ -52,7 +57,7 @@ const App = () => {
             </Routes>
             <BannerAbout />
             <BannerContact />
-            <Footer weather={weather}/>
+            <Footer weather={weather} isOpen={isOpen} setOpen={setOpen} />
         </div>
     );
 };

@@ -1,0 +1,27 @@
+.menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 40px;
+    cursor: pointer;
+    // display: none;
+    position: relative;
+    top: 0;
+    left: 30px;
+    right: 0;
+    z-index: 1;
+}
+
+.burger {
+    padding-bottom: 4px;
+}
+
+.title {
+    font-family: "Gilroy";
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    color: #ffffff;
+    padding-top: 6px;
+}

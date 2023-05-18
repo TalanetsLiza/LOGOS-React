@@ -3,17 +3,25 @@ import Logo from "../logo/Logo";
 import Search from "./search/Search";
 import Contacts from "./contacts/Contacts";
 import CartButton from "./cartButton/CartButton";
+import MenuBerger from "./menuBerger/MenuBerger";
 
-const Header = () => {
+const Header = ({isOpen, setOpen}) => {
     return (
         <header className={styles.header}>
-            <div className={styles.logo}>
-                <Logo />
-            </div>
-            <Search />
-            <Contacts />
-            <div className={styles.button}>
-                <CartButton />
+            <div className={styles.container}>
+                <div className={styles.menuMob}>
+                    <MenuBerger isOpen={isOpen} setOpen={setOpen} />
+                </div>            
+                <div className={styles.logo}>
+                    <Logo />
+                </div>
+                <div className={styles.search}>
+                       <Search />
+                </div>
+                    <Contacts />
+                <div className={styles.button}>
+                    <CartButton />
+                </div>
             </div>
         </header>
     );

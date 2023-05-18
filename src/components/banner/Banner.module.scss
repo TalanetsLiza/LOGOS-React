@@ -60,3 +60,21 @@
     line-height: 109.2%;
     padding: 8px 40px 8px 0;
 }
+
+@media (max-width: 750px) {
+    .title {
+        font-size: 45px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .titleShadow {
+        font-size: 45px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content {
+        margin-left: 25px;
+    }
+}

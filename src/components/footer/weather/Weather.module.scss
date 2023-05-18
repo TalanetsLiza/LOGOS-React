@@ -16,3 +16,10 @@
     line-height: 24px;
     color: #ffffff;
 }
+
+@media (max-width: 890px) {
+    .container {
+        margin-left: auto;
+        margin-right: 30px;
+    }
+}
