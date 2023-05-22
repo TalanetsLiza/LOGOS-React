@@ -1,0 +1,102 @@
+.card {
+    background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
+    border-radius: 10px;
+    padding: 32px 32px 55px;
+    margin-bottom: 20px;
+}
+
+.header {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    margin-bottom: 17px;
+}
+
+.fields {
+    display: flex;
+    gap: 15px;
+    padding-bottom: 15px;
+
+    &> * {
+        min-width: 0;
+    }
+
+    .xs_2 {
+        flex-basis: 16.67%;
+    }
+    .xs_3 {
+        flex-basis: 25%;
+    }
+    .xs_4 {
+        flex-basis: 33.33%;
+    }
+    .xs_6 {
+        flex-basis: 50%;
+    }
+    .xs_8 {
+        flex-basis: 66.66%;
+    }
+    .xs_12 {
+        flex-basis: 100%;
+    }
+}
+
+.textField {
+    box-sizing: border-box;
+    outline: none;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    height: 60px;
+    padding: 0 30px;
+
+    &,
+    &::placeholder {
+        font-family: "Gilroy";
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+    }
+}
+
+.buttonField {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 19px;
+    font-family: "Gilroy";
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.buttonField {
+    margin-bottom: 20px;
+}
+
+.button {
+    font-family: "Gilroy";
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    cursor: pointer;
+    background-color: transparent;
+
+    border: 1px solid #618967;
+    padding: 0 54px;
+    height: 60px;
+
+    &.activeButton {
+        background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+        font-weight: 700;
+    }
+
+    &:first-child {
+        border-radius: 10px 0px 0px 10px;
+    }
+
+    &:last-child {
+        border-radius: 0px 10px 10px 0px;
+    }
+}

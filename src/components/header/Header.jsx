@@ -3,14 +3,14 @@ import Logo from "../logo/Logo";
 import Search from "./search/Search";
 import Contacts from "./contacts/Contacts";
 import CartButton from "./cartButton/CartButton";
-import MenuBerger from "./menuBerger/MenuBerger";
+import MenuBurger from "./menuBurger/MenuBurger";
 
-const Header = ({isOpen, setOpen}) => {
+const Header = ({ busketState }) => {
     return (
         <header className={styles.header}>
             <div className={styles.container}>
                 <div className={styles.menuMob}>
-                    <MenuBerger isOpen={isOpen} setOpen={setOpen} />
+                    <MenuBurger />
                 </div>            
                 <div className={styles.logo}>
                     <Logo />
@@ -20,7 +20,7 @@ const Header = ({isOpen, setOpen}) => {
                 </div>
                     <Contacts />
                 <div className={styles.button}>
-                    <CartButton />
+                    <CartButton busketState={busketState} />
                 </div>
             </div>
         </header>

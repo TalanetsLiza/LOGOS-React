@@ -1,4 +1,4 @@
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import styles from "./App.module.scss";
 import Banner from "./banner/Banner";
 import Header from "./header/Header";
@@ -11,15 +11,13 @@ import PromotionPage from "./pages/promotion/PromotionPage";
 import ReturnPage from "./pages/return/ReturnPage";
 import DeliveryPage from "./pages/delivery/DeliveryPage";
 import AboutPage from "./pages/about/AboutPage";
-import BannerContact from "./bannerContact/BannerContact";
-import BannerAbout from "./bannerAbout/BannerAbout";
 import { useEffect, useReducer, useState } from "react";
 import busketReducer from "../reducers/busketReducer/busketReducer";
 import busketInitialState from "../reducers/busketReducer/busketInitialState";
+import Ordering from "./pages/busket/ordering/Ordering";
 
 const App = () => {
     const [weather, setWeather] = useState({});
-    const [isOpen, setOpen] = useState(false);
     
     const [state, dispatch] = useReducer(busketReducer, busketInitialState);
 
@@ -42,22 +40,22 @@ const App = () => {
     
     return (
         <div className={styles.container}>
-            <Header isOpen={isOpen} setOpen={setOpen} />
+            <Header busketState={state}/>
             <Routes>
                 <Route path={catalogByCategoryPath} element={<Banner />} />
             </Routes>
             <Navigation />
             <Routes>
+                <Route path="/" element={<Navigate to={pageUrls.catalogColdSnacks} replace />} />
                 <Route path={catalogByCategoryPath} element={<CatalogPage state={state} dispatch={dispatch} />} />
                 <Route path={pageUrls.busket} element={<BusketPage />} />
+                <Route path={pageUrls.ordering} element={<Ordering />} />
                 <Route path={pageUrls.promotion} element={<PromotionPage />} />
                 <Route path={pageUrls.return} element={<ReturnPage />} />
                 <Route path={pageUrls.delivery} element={<DeliveryPage />} />
                 <Route path={pageUrls.about} element={<AboutPage />} />
             </Routes>
-            <BannerAbout />
-            <BannerContact />
-            <Footer weather={weather} isOpen={isOpen} setOpen={setOpen} />
+            <Footer weather={weather} />
         </div>
     );
 };

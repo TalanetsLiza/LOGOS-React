@@ -13,7 +13,13 @@ const t = {
         title1: "Доставка ВКУСНЕЙШИХ",
         title2: "БЛЮд за 60 минут",
         description: "Ещё не пробовал?",
-    }
+    },
+    busketPage: {
+        name: "Корзина",
+    },
+    ordering: {
+        name: "Оформление заказа",
+    },
 };
 
 export default t;

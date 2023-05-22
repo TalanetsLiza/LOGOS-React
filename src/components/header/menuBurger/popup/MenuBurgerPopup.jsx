@@ -1,28 +1,28 @@
 import { Link } from "react-router-dom";
-import styles from "./NavigationFooter.module.scss";
-import pageUrls from "../../../constants/pageUrls";
+import pageUrls from "../../../../constants/pageUrls";
+import styles from "./MenuBurgerPopup.module.scss";
 
-const NavigationFooter = () => {
+const MenuBurgerPopup = ({ onClick }) => {
     return (
-        <nav className={styles.navigation}>
+        <nav className={styles.container}>
             <ul className={styles.ul}>
                 <li>
-                    <Link className={styles.li} to={pageUrls.about}>
+                    <Link className={styles.li} to={pageUrls.about} onClick={onClick}>
                         О ресторане
                     </Link>
                 </li>
                 <li>
-                    <Link className={styles.li} to={pageUrls.delivery}>
+                    <Link className={styles.li} to={pageUrls.delivery} onClick={onClick}>
                         Условия доставки
                     </Link>
                 </li>
                 <li>
-                    <Link className={styles.li} to={pageUrls.return}>
+                    <Link className={styles.li} to={pageUrls.return} onClick={onClick}>
                         Возврат товара
                     </Link>
                 </li>
                 <li>
-                    <Link className={styles.li} to={pageUrls.promotion}>
+                    <Link className={styles.li} to={pageUrls.promotion} onClick={onClick}>
                         Акция
                     </Link>
                 </li>
@@ -31,4 +31,4 @@ const NavigationFooter = () => {
     )
 };
 
-export default NavigationFooter;
+export default MenuBurgerPopup;

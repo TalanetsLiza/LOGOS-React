@@ -3,6 +3,8 @@ import styles from "./CatalogPages.module.scss";
 import menuData from "../../../data/menuData";
 import Card from "./card/Card";
 import t from "../../../assets/translations/translations";
+import BannerAbout from "../../bannerAbout/BannerAbout";
+import BannerContact from "../../bannerContact/BannerContact";
 
 
 const CatalogPage = ({dispatch, state}) => {
@@ -14,16 +16,20 @@ const CatalogPage = ({dispatch, state}) => {
 
 
     return (
-        <div className={styles.container}>
-            <h2 className={styles.title}>
-                {t.category[category]}
-            </h2>
-            <div className={styles.container__cards}>
-                {data.map((dataItem) => (
-                    <Card key={dataItem.id} dataItem={dataItem} state={state} dispatch={dispatch} />
-                ))}
+       <>
+            <div className={styles.container}>
+                <h2 className={styles.title}>
+                    {t.category[category]}
+                </h2>
+                <div className={styles.container__cards}>
+                    {data.map((dataItem) => (
+                        <Card key={dataItem.id} dataItem={dataItem} state={state} dispatch={dispatch} />
+                    ))}
+                </div>
             </div>
-        </div>
+            <BannerAbout />
+            <BannerContact />
+       </>
     );
 };
 

@@ -1,0 +1,39 @@
+.container {
+    margin: 0 auto;
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 35px;
+    margin-bottom: 53px;
+}
+
+.back {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    
+
+    &__title {
+        color: #FFFFFF;
+        padding-left: 7px;
+    }
+}
+
+.title {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 39px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-family: "Gilroy";
+    padding-left: 20px;
+    margin-top: 35px;
+    border-left: 4px solid #618967;
+}

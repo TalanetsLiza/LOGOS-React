@@ -1,7 +1,16 @@
+.navigation {
+    @media (max-width: 900px) {
+        display: none;
+    }
+}
 
 .ul {
     display: flex;
     padding-left: 85px;
+
+    @media (max-width: 1165px) {
+        padding-left: 40px;
+    }
 }
 
 .li {
@@ -13,39 +22,10 @@
     color: #FFFFFF;
     padding-right: 40px;
     cursor: pointer;
-}
 
-@media (max-width: 1165px) {
-    .ul {
-        padding-left: 40px;
-    }
-    
-    .li {
+    @media (max-width: 1165px) {
         font-size: 18px;
         padding-right: 20px;
         text-align: center;
-    }
-}
-
-@media (max-width: 900px) {
-    .navigationMenu {
-        display: flex;
-        position: absolute;
-        min-width: 100%;
-        top: 99px;
-        left: 0;
-        background-color: #403C3B;
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        height: 100%;
-    }
-    
-    .ul {
-        display: flex;
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .li {
-        height: 20px;
     }
 }
