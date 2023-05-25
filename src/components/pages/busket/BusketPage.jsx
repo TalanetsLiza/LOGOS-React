@@ -9,10 +9,10 @@ const BusketPage = () => {
     return (
         <div className={styles.container}>
             <div className={styles.header}>
-                <div className={styles.back}>
+                <Link className={styles.back} to={pageUrls.catalogColdSnacks}>
                     <BackIcon />
                     <span className={styles.back__title}>к выбору блюда</span>              
-                </div>
+                </Link>
                 <h2 className={styles.title}>
                    {t.busketPage.name}
                 </h2>

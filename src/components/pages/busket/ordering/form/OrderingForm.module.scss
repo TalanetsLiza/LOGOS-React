@@ -1,7 +1,11 @@
+input:-webkit-autofill {
+    transition: all 5000s ease-in-out 0s;
+}
+
 .card {
     background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
     border-radius: 10px;
-    padding: 32px 32px 55px;
+    padding: 32px 32px 30px;
     margin-bottom: 20px;
 }
 
@@ -16,7 +20,7 @@
 .fields {
     display: flex;
     gap: 15px;
-    padding-bottom: 15px;
+    margin-bottom: 15px;
 
     &> * {
         min-width: 0;
@@ -31,11 +35,20 @@
     .xs_4 {
         flex-basis: 33.33%;
     }
+    .xs_5 {
+        flex-basis: 41.67%;
+    }
     .xs_6 {
         flex-basis: 50%;
     }
     .xs_8 {
         flex-basis: 66.66%;
+    }
+    .xs_9 {
+        flex-basis: 75%;
+    }
+    .xs_10 {
+        flex-basis: 83.33%;
     }
     .xs_12 {
         flex-basis: 100%;
@@ -59,6 +72,13 @@
         line-height: 19px;
         color: #FFFFFF;
     }
+}
+
+.popupTextField {
+    color: #FFFFFF;
+    display: flex;
+    align-items: center;
+    height: 58px;
 }
 
 .buttonField {
@@ -99,4 +119,128 @@
     &:last-child {
         border-radius: 0px 10px 10px 0px;
     }
+    
+    &:hover{
+        opacity: 0.9;
+    }
+}
+
+.personField {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: "Gilroy";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.personButton {
+    background-color: transparent;
+    border: none;
+    color: #FFFFFF;
+    font-family: "Gilroy";
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 21px;
+}
+
+.personCount {
+    color: #FFFFFF;
+    font-family: "Gilroy";
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 21px;
+    padding: 0 8px;
+}
+
+.callback {
+    display: flex;
+    flex-direction: column;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 22px;
+    color: #ffffff;
+    margin: 22px 0 17px;
+}
+
+.callbackField {
+    padding-top: 25px;
+}
+
+.callbackInput {
+    border: 1px solid #E7EEF1;
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    transition: 0.2s all linear;
+    outline: none;
+    margin-right: 5px;
+    cursor: pointer;
+
+    &:checked {
+        border: 5px solid #72A479
+    }
+}
+
+.callbackLabel {
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 15px;
+    color: #FFFFFF;
+    display: flex;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+.agreement {
+    display: flex;
+    align-items: center;
+}
+
+.agreementLabel {
+    display: flex;
+    align-items: center;
+    font-family: "Gilroy";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 15px;
+    color: #FFFFFF;
+}
+
+.agreementInput {
+    margin-right: 13px;
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    background-color: #FFFFFF;
+    cursor: pointer;
+
+    &:checked {
+        background-image: url(../../../../../assets//images//icon/agreement.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+}
+
+.buttonOrdering {
+    padding: 0 50px;
+    height: 51px;
+    color: #FFFFFF;
+    background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
+    border-radius: 10px;
+    border: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    max-width: 209px;
+    font-family: "Gilroy";
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 17px;
 }
