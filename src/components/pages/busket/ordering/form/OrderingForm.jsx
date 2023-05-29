@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ReactComponent as TimegIcon } from "../../../../../assets/images/icon/time.svg";
 import styles from "./OrderingForm.module.scss";
 import OrderComponent from "../orderComponent/OrderComponent";
+import useValidation from "../../../../validation/useValidation";
 
 const defaultState = {
     name: "",
@@ -14,6 +15,7 @@ const defaultState = {
     cash: "cash",
     timeDelivery: "soon",
     phoneDelivery: "",
+    toTime: "",
     person: "1",
     callback: "noCall",
     agreement: false,
@@ -21,10 +23,17 @@ const defaultState = {
 
 const OrderingForm = () => {
     const [values, setValues] = useState(defaultState);
+    const { errors, validate, errorsRef } = useValidation();
 
     const handleChange = (event) => {
         const newValues = {...values};
-        newValues[event.target.name] = event.target.value;
+        const name = event.target.name;
+        const value = event.target.value;
+        
+        newValues[name] = value;
+        
+        validate(name, value);
+        
         setValues(newValues);
     };
 
@@ -34,28 +43,49 @@ const OrderingForm = () => {
         setValues(newValues);
     };
 
+    const handelSubmit = (event) => {
+        event.preventDefault();
+        Object.entries(values).forEach(([name, value]) => validate(name, value));
+        setTimeout(() => {
+            console.log(errors, errorsRef.current);
+            const hasErorr = Object.values(errorsRef.current).some((text) => !!text);
+            if (hasErorr) {
+                const form = document.getElementById("ordering-form");
+                form?.scrollIntoView();
+                return;
+            }
+            alert("Submitted");
+        }, 10);
+    };
+
     console.log(values);
 
     return (
-        <form>
+        <form onSubmit={handelSubmit} id="ordering-form">
             <OrderComponent title="1. Контактная информация">
                 <div className={styles.fields}>
-                    <input
-                        className={`${styles.textField} ${styles.xs_6}`}
-                        type="text"
-                        placeholder="Имя*"
-                        name="name"
-                        onChange={handleChange}
-                        value={values.name}
-                    />
-                    <input
-                        className={`${styles.textField} ${styles.xs_6}`}
-                        type="text"
-                        placeholder="Телефон*"
-                        name="phone"
-                        onChange={handleChange}
-                        value={values.phone}
-                    />
+                    <div className={styles.fieldContainer}>
+                        <input
+                            className={`${styles.textField} ${styles.xs_6}`}
+                            type="text"
+                            placeholder="Имя*"
+                            name="name"
+                            onChange={handleChange}
+                            value={values.name}
+                        />
+                        <div className={styles.fieldError} title={errors.name}>{errors.name}</div>
+                    </div>
+                    <div className={styles.fieldContainer}>
+                        <input
+                            className={`${styles.textField} ${styles.xs_6}`}
+                            type="text"
+                            placeholder="Телефон*"
+                            name="phone"
+                            onChange={handleChange}
+                            value={values.phone}
+                        />
+                        <div className={styles.fieldError} title={errors.phone}>{errors.phone}</div>
+                    </div>
 
                     {/* {[
                         { name: "name", placeholder: "Имя*" },
@@ -96,7 +126,7 @@ const OrderingForm = () => {
                     </div>
                     {values.delivery === "delivery" && (
                         <div className={`${styles.popupTextField} ${styles.xs_6}`}>
-                           <TimegIcon /> Доставим через  1 час 30 минут
+                           <TimegIcon className={styles.icon}/> Доставим через  1 час 30 минут
                         </div>
                     )}
                 </div>
@@ -122,14 +152,17 @@ const OrderingForm = () => {
                     />
                 </div>
                 <div className={styles.fields}>
-                    <input
-                        className={`${styles.textField} ${styles.xs_4}`}
-                        type="text"
-                        placeholder="№ квартиры/офиса"
-                        name="flat"
-                        onChange={handleChange}
-                        value={values.flat}
-                    />
+                    <div className={styles.fieldContainer}>
+                        <input
+                            className={`${styles.textField} ${styles.xs_4}`}
+                            type="text"
+                            placeholder="№ квартиры/офиса"
+                            name="flat"
+                            onChange={handleChange}
+                            value={values.flat}
+                        />
+                        <div className={styles.fieldError} title={errors.flat}>{errors.flat}</div>
+                    </div>
                     <input
                         className={`${styles.textField} ${styles.xs_4}`}
                         type="text"
@@ -138,14 +171,17 @@ const OrderingForm = () => {
                         onChange={handleChange}
                         value={values.entrance}
                     />
-                    <input
-                        className={`${styles.textField} ${styles.xs_4}`}
-                        type="text"
-                        placeholder="Телефон*"
-                        name="phoneDelivery"
-                        onChange={handleChange}
-                        value={values.phoneDelivery}
-                    />
+                    <div className={styles.fieldContainer}>
+                        <input
+                            className={`${styles.textField} ${styles.xs_4}`}
+                            type="text"
+                            placeholder="Телефон*"
+                            name="phoneDelivery"
+                            onChange={handleChange}
+                            value={values.phoneDelivery}
+                        />
+                        <div className={styles.fieldError} title={errors.phoneDelivery}>{errors.phoneDelivery}</div>
+                    </div>
                 </div>
                 <div className={styles.fields}>
                     <input
@@ -185,7 +221,7 @@ const OrderingForm = () => {
             </OrderComponent>
             <OrderComponent title="4. Когда доставить">
                 <div className={styles.fields}>
-                    <div className={`${styles.buttonField} ${styles.xs_9}`}>
+                    <div className={`${styles.buttonField} ${styles.xs_8}`}>
                         {[
                             { value: "soon", text: "В ближайшее время" },
                             { value: "toTime", text: "Ко времени" },
@@ -205,6 +241,18 @@ const OrderingForm = () => {
                             </button>
                         ))}
                     </div>
+                    {values.timeDelivery === "toTime" && (
+                        <div className={`${styles.popupTextField} ${styles.xs_4}`}>
+                            <input
+                                    className={styles.textField}
+                                    type="time"
+                                    placeholder="Укажите время"
+                                    name="toTime"
+                                    onChange={handleChange}
+                                    value={values.toTime}
+                                />
+                        </div>
+                    )}
                 </div>
                 <div className={styles.fields}>
                     <div className={`${styles.textField} ${styles.xs_5} ${styles.personField}`}>
@@ -283,7 +331,6 @@ const OrderingForm = () => {
                     <button 
                         className={styles.buttonOrdering}
                         type="submit"
-                        disabled={!values.agreement}
                     >
                         Оформить заказ
                     </button>

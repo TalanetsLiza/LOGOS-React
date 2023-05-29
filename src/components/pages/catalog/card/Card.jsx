@@ -1,15 +1,20 @@
+import { Link } from "react-router-dom";
 import styles from "./Card.module.scss";
 import CardOrder from "./order/CardOrder";
+import pageUrls from "../../../../constants/pageUrls";
 
 const Card = ({ dataItem, dispatch, state }) => {
     // const [state, dispatch] = useReducer(busketReducer, busketInitialState);
 
     return (
         <div className={styles.card}>
-            <img 
-                src={dataItem.image.src}
-                alt={dataItem.image.alt}    
-            />
+            <Link to={`${pageUrls.product}/${dataItem.id}`}>
+                <img 
+                    src={dataItem.image.src}
+                    alt={dataItem.image.alt}
+                    className={styles.image}
+                />
+            </Link>
             <div className={styles.container}>
                 <div className={styles.block}>
                     <div className={styles.title}>

@@ -15,6 +15,7 @@ import { useEffect, useReducer, useState } from "react";
 import busketReducer from "../reducers/busketReducer/busketReducer";
 import busketInitialState from "../reducers/busketReducer/busketInitialState";
 import Ordering from "./pages/busket/ordering/Ordering";
+import ProductPage from "./pages/product/ProductPage";
 
 const App = () => {
     const [weather, setWeather] = useState({});
@@ -54,6 +55,7 @@ const App = () => {
                 <Route path={pageUrls.return} element={<ReturnPage />} />
                 <Route path={pageUrls.delivery} element={<DeliveryPage />} />
                 <Route path={pageUrls.about} element={<AboutPage />} />
+                <Route path={`${pageUrls.product}/:id`} element={<ProductPage />} />
             </Routes>
             <Footer weather={weather} />
         </div>

@@ -14,6 +14,7 @@ const pageUrls = {
     delivery: "/delivery",
     return: "/return",
     promotion: "/promotion",
+    product: "/product",
 };
 
 export default pageUrls;

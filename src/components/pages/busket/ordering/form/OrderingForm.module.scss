@@ -55,6 +55,23 @@ input:-webkit-autofill {
     }
 }
 
+.fieldContainer {
+    position: relative;
+    flex-basis: 50%;
+}
+
+.fieldError {
+    max-width: 95%;
+    position: absolute;
+    left: 10px;
+    bottom: -8px;
+    color: rgb(218, 94, 94);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+
 .textField {
     box-sizing: border-box;
     outline: none;
@@ -63,6 +80,7 @@ input:-webkit-autofill {
     border-radius: 10px;
     height: 60px;
     padding: 0 30px;
+    width: 100%;
 
     &,
     &::placeholder {
@@ -123,6 +141,10 @@ input:-webkit-autofill {
     &:hover{
         opacity: 0.9;
     }
+}
+
+.icon {
+    margin-right: 10px;
 }
 
 .personField {

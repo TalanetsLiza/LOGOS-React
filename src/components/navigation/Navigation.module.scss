@@ -24,7 +24,8 @@
         border-bottom-color: #618967;
     }
 
-    &:active {
+    &:active,
+    &.itemActive {
         opacity: .9;
         border-bottom-color: #618967;
     }
