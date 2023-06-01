@@ -31,6 +31,10 @@ const menuData = [
             src: lamb,
             alt: "food"
         },
+        proteins: 17.73,
+        fats: 7.63,
+        carbohydrates: 22.35,
+        kilocalories: 240,
     },
     {
         id: 2,
@@ -42,7 +46,11 @@ const menuData = [
         image: {
             src: turkey,
             alt: "food"
-        }
+        },
+        proteins: 17.73,
+        fats: 7.63,
+        carbohydrates: 22.35,
+        kilocalories: 240,
     },
     {
         id: 3,
@@ -54,7 +62,11 @@ const menuData = [
         image: {
             src: goose,
             alt: "food"
-        }
+        },
+        proteins: 17.73,
+        fats: 7.63,
+        carbohydrates: 22.35,
+        kilocalories: 240,
     },
     {
         id: 4,
@@ -66,7 +78,11 @@ const menuData = [
         image: {
             src: duck,
             alt: "food"
-        }
+        },
+        proteins: 17.73,
+        fats: 7.63,
+        carbohydrates: 22.35,
+        kilocalories: 240,
     },
     {
         id: 5,
@@ -78,7 +94,11 @@ const menuData = [
         image: {
             src: soupSolyanka,
             alt: "food"
-        }
+        },
+        proteins: 17.73,
+        fats: 7.63,
+        carbohydrates: 22.35,
+        kilocalories: 240,
     },
     {
         id: 6,
@@ -90,7 +110,11 @@ const menuData = [
         image: {
             src: soupLapha,
             alt: "food"
-        }
+        },
+        proteins: 17.73,
+        fats: 7.63,
+        carbohydrates: 22.35,
+        kilocalories: 240,
     },
     {
         id: 7,
@@ -102,7 +126,11 @@ const menuData = [
         image: {
             src: soupPumpkin,
             alt: "food"
-        }
+        },
+        proteins: 17.73,
+        fats: 7.63,
+        carbohydrates: 22.35,
+        kilocalories: 240,
     },
     {
         id: 8,
@@ -114,7 +142,11 @@ const menuData = [
         image: {
             src: soupTomatni,
             alt: "food"
-        }
+        },
+        proteins: 17.73,
+        fats: 7.63,
+        carbohydrates: 22.35,
+        kilocalories: 240,
     },
     {
         id: 9,
@@ -126,7 +158,11 @@ const menuData = [
         image: {
             src: fishTrout,
             alt: "food"
-        }
+        },
+        proteins: 17.73,
+        fats: 7.63,
+        carbohydrates: 22.35,
+        kilocalories: 240,
     },
     {
         id: 10,
@@ -138,7 +174,11 @@ const menuData = [
         image: {
             src: fishSalmon,
             alt: "food"
-        }
+        },
+        proteins: 17.73,
+        fats: 7.63,
+        carbohydrates: 22.35,
+        kilocalories: 240,
     },
     {
         id: 11,
@@ -150,7 +190,11 @@ const menuData = [
         image: {
             src: fishSeafood,
             alt: "food"
-        }
+        },
+        proteins: 17.73,
+        fats: 7.63,
+        carbohydrates: 22.35,
+        kilocalories: 240,
     },
     {
         id: 12,
@@ -162,7 +206,11 @@ const menuData = [
         image: {
             src: fishCarp,
             alt: "food"
-        }
+        },
+        proteins: 17.73,
+        fats: 7.63,
+        carbohydrates: 22.35,
+        kilocalories: 240,
     },
     {
         id: 13,
@@ -174,7 +222,11 @@ const menuData = [
         image: {
             src: drinkCoffe,
             alt: "drink"
-        }
+        },
+        proteins: 17.73,
+        fats: 7.63,
+        carbohydrates: 22.35,
+        kilocalories: 240,
     },
     {
         id: 14,
@@ -186,7 +238,11 @@ const menuData = [
         image: {
             src: drinkTea,
             alt: "drink"
-        }
+        },
+        proteins: 17.73,
+        fats: 7.63,
+        carbohydrates: 22.35,
+        kilocalories: 240,
     },
     {
         id: 15,
@@ -198,7 +254,11 @@ const menuData = [
         image: {
             src: drinkJuice,
             alt: "drink"
-        }
+        },
+        proteins: 17.73,
+        fats: 7.63,
+        carbohydrates: 22.35,
+        kilocalories: 240,
     },
     {
         id: 16,
@@ -210,7 +270,11 @@ const menuData = [
         image: {
             src: drinkHot,
             alt: "drink"
-        }
+        },
+        proteins: 17.73,
+        fats: 7.63,
+        carbohydrates: 22.35,
+        kilocalories: 240,
     },
     {
         id: 17,
@@ -223,6 +287,10 @@ const menuData = [
             src: drinkAlcoholic,
             alt: "drink"
         },
+        proteins: 17.73,
+        fats: 7.63,
+        carbohydrates: 22.35,
+        kilocalories: 240,
     },
 ];
 

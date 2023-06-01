@@ -20,6 +20,16 @@ const t = {
     ordering: {
         name: "Оформление заказа",
     },
+    back: {
+        name: "вернуться назад",
+        name1: "в корзину",
+        name2: "к выбору блюд",
+    },
+    button: {
+        inBusket: "В корзину",
+        sum: "+",
+        subtraction: "-",
+    }
 };
 
 export default t;

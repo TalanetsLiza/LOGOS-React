@@ -55,7 +55,7 @@ const App = () => {
                 <Route path={pageUrls.return} element={<ReturnPage />} />
                 <Route path={pageUrls.delivery} element={<DeliveryPage />} />
                 <Route path={pageUrls.about} element={<AboutPage />} />
-                <Route path={`${pageUrls.product}/:id`} element={<ProductPage />} />
+                <Route path={`${pageUrls.product}/:id`} element={<ProductPage state={state} dispatch={dispatch} />} />
             </Routes>
             <Footer weather={weather} />
         </div>

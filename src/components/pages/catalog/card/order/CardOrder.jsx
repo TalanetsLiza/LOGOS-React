@@ -1,8 +1,10 @@
 import { ReactComponent as IconBuy } from "../../../../../assets/images/icon/Buy.svg";
 import styles from "./CardOrder.module.scss";
 import { ADD, DECREASE_COUNT, INCREASE_COUNT } from "../../../../../reducers/busketReducer/types";
+import Button from "../../../../button/Button";
+import t from "../../../../../assets/translations/translations";
 
-const CardOrder = ({ dataItem, dispatch, state }) => {
+const CardOrder = ({ dataItem, dispatch, state, addStyles }) => {
 
     const addToBusket = () => {
         dispatch({type: ADD, id: dataItem.id });
@@ -39,16 +41,20 @@ const CardOrder = ({ dataItem, dispatch, state }) => {
 
     return (
         <div className={styles.container}>
-            <button className={styles.buttonCount} onClick={decreaseCount}>
-                -
-            </button>
+            <Button 
+                title={t.button.subtraction}
+                handleClick={decreaseCount}
+                addStyles={styles.buttonCount}
+            />
             <div className={styles.price}>
                 {dataItem.price * count} ₽
             </div>
-            <button className={styles.buttonCount} onClick={increaseCount}>
-                +
-            </button>
-            <div className={styles.count} >{count}</div>
+            <Button 
+                title={t.button.sum}
+                handleClick={increaseCount}
+                addStyles={styles.buttonCount}
+            />
+            <div className={`${styles.count} ${addStyles}`} >{count}</div>
         </div>
     );
 

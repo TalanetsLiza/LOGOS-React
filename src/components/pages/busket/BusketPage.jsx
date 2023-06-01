@@ -11,7 +11,7 @@ const BusketPage = () => {
             <div className={styles.header}>
                 <Link className={styles.back} to={pageUrls.catalogColdSnacks}>
                     <BackIcon />
-                    <span className={styles.back__title}>к выбору блюда</span>              
+                    <span className={styles.back__title}>{t.back.name2}</span>              
                 </Link>
                 <h2 className={styles.title}>
                    {t.busketPage.name}

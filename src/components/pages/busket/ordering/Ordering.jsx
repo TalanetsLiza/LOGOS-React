@@ -11,7 +11,7 @@ const Ordering = () => {
             <div className={styles.header}>
                 <Link className={styles.back} to={pageUrls.busket}>
                     <BackIcon />
-                    <span className={styles.back__title}>в корзину</span>              
+                    <span className={styles.back__title}>{t.back.name1}</span>              
                 </Link>
                 <h2 className={styles.title}>
                    {t.ordering.name}
