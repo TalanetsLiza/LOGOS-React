@@ -29,6 +29,7 @@ const t = {
         inBusket: "В корзину",
         sum: "+",
         subtraction: "-",
+        close: "Х",
     }
 };
 

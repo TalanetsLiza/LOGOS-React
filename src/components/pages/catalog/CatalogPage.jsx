@@ -12,9 +12,6 @@ const CatalogPage = ({dispatch, state}) => {
 
     const data = menuData.filter((menuItem) => menuItem.category.includes(category));
 
-    // console.log("Catalog", category, data);
-
-
     return (
        <>
             <div className={styles.container}>

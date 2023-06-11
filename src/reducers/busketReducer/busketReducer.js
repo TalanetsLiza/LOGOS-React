@@ -1,4 +1,4 @@
-import { ADD, DECREASE_COUNT, INCREASE_COUNT } from "./types";
+import { ADD, DECREASE_COUNT, DELETE_COUNT, INCREASE_COUNT } from "./types";
 
 
 const busketReducer = (state, action) => {
@@ -40,6 +40,13 @@ const busketReducer = (state, action) => {
                     return item;
                 })
                 .filter((item) => item.count > 0);
+
+            return newState;
+        };
+        case DELETE_COUNT: {
+            const { id } = action;
+
+            const newState = state.filter((item) => item.id !== id);
 
             return newState;
         };

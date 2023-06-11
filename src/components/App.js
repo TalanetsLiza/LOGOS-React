@@ -16,14 +16,18 @@ import busketReducer from "../reducers/busketReducer/busketReducer";
 import busketInitialState from "../reducers/busketReducer/busketInitialState";
 import Ordering from "./pages/busket/ordering/Ordering";
 import ProductPage from "./pages/product/ProductPage";
+import Preloader from "./preloader/Preloader";
 
 const App = () => {
     const [weather, setWeather] = useState({});
-    
+    const [isPreloader, setIsPreloader] = useState(false);
     const [state, dispatch] = useReducer(busketReducer, busketInitialState);
 
     useEffect( () => {
-        fetch("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m")
+        setIsPreloader(true);
+
+        setTimeout(() => {
+            fetch("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m")
         .then(response => response.json())
         .then((data) => {
             const dataWeather = {
@@ -33,7 +37,8 @@ const App = () => {
                 time: data.current_weather.time,
             }
             setWeather(dataWeather);
-        });
+        }).finally(() => setIsPreloader(false));
+        }, 10)  
     },[])
     
 
@@ -41,23 +46,28 @@ const App = () => {
     
     return (
         <div className={styles.container}>
-            <Header busketState={state}/>
-            <Routes>
-                <Route path={catalogByCategoryPath} element={<Banner />} />
-            </Routes>
-            <Navigation />
-            <Routes>
-                <Route path="/" element={<Navigate to={pageUrls.catalogColdSnacks} replace />} />
-                <Route path={catalogByCategoryPath} element={<CatalogPage state={state} dispatch={dispatch} />} />
-                <Route path={pageUrls.busket} element={<BusketPage />} />
-                <Route path={pageUrls.ordering} element={<Ordering />} />
-                <Route path={pageUrls.promotion} element={<PromotionPage />} />
-                <Route path={pageUrls.return} element={<ReturnPage />} />
-                <Route path={pageUrls.delivery} element={<DeliveryPage />} />
-                <Route path={pageUrls.about} element={<AboutPage />} />
-                <Route path={`${pageUrls.product}/:id`} element={<ProductPage state={state} dispatch={dispatch} />} />
-            </Routes>
-            <Footer weather={weather} />
+            {isPreloader ? <Preloader />:
+                <>
+                    <Header busketState={state}/>
+                    <Routes>
+                        <Route path={catalogByCategoryPath} element={<Banner />} />
+                        <Route path="*" element={null} />
+                    </Routes>
+                    <Navigation />
+                    <Routes>
+                        <Route path="/" element={<Navigate to={pageUrls.catalogColdSnacks} replace />} />
+                        <Route path={catalogByCategoryPath} element={<CatalogPage state={state} dispatch={dispatch} />} />
+                        <Route path={pageUrls.busket} element={<BusketPage state={state} dispatch={dispatch} />} />
+                        <Route path={pageUrls.ordering} element={<Ordering />} />
+                        <Route path={pageUrls.promotion} element={<PromotionPage />} />
+                        <Route path={pageUrls.return} element={<ReturnPage />} />
+                        <Route path={pageUrls.delivery} element={<DeliveryPage />} />
+                        <Route path={pageUrls.about} element={<AboutPage />} />
+                        <Route path={`${pageUrls.product}/:id`} element={<ProductPage state={state} dispatch={dispatch} />} />
+                    </Routes>
+                    <Footer weather={weather} />
+                </>
+            }
         </div>
     );
 };

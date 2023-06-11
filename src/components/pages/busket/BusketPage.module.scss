@@ -3,14 +3,13 @@
     max-width: 1440px;
     display: flex;
     flex-direction: column;
-
 }
 
 .header {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 35px 0 70px 318px;
+    margin: 35px 0 30px 318px;
 }
 
 .back {
@@ -44,65 +43,16 @@
 
 .productsBusket {
     display: flex;
-    align-items: center;
+    justify-content: center;
     margin: 0 auto;
-    width: 1096px;
-    height: 100px;
-    border: 1px solid #618967;
-}
-
-.otherProducts {
-    display: flex;
-    align-items: center;
-    margin: 20px auto;
-    width: 1096px;
-    height: 100px;
-    border: 1px solid #618967;
-
-}
-.total {
-    background: linear-gradient(90deg, #494544 0%, #504B4A 100%);
-    border-radius: 10px;
-    padding: 20px 27px 10px 38px;
-    font-family: "Gilroy";
-    color: #FFFFFF;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 14px;
-    width: 763px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-left: 318px;
-    margin-bottom: 89px;
-}
-
-.totalBusket {
-    display: flex;
     flex-direction: column;
 }
 
-.totalDelivery {
-    padding-top: 10px;
-}
-
-.totalMinPrice {
-    padding-top: 10px;
-}
-
-.button {
-    padding: 15px 50px;
+.busketZero {
+    font-size: 40px;
     color: #FFFFFF;
-    background: linear-gradient(114.93deg, #618967 5.11%, #72A479 94%);
-    border-radius: 10px;
-    border: none;
     display: flex;
     align-items: center;
-    cursor: pointer;
-    outline: none;
-    max-width: 209px;
-    font-family: "Gilroy";
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 17px;
+    justify-content: center;
+    height: 300px;
 }
