@@ -3,8 +3,8 @@ import styles from "./CardOrder.module.scss";
 import Button from "../../../../button/Button";
 import t from "../../../../../assets/translations/translations";
 import { useDispatch, useSelector } from "react-redux";
-import busketActionCreators from "../../../../../store/busketReducer/busketActionCreators";
 import busketSelectors from "../../../../../store/busketReducer/busketSelectors";
+import { add, decrease, increase } from "../../../../../store/busketReducer/busketSlice";
 
 const CardOrder = ({ dataItem, addStyles }) => {
     // console.log("render");
@@ -15,15 +15,15 @@ const CardOrder = ({ dataItem, addStyles }) => {
     const dispatch = useDispatch();
 
     const addToBusket = () => {
-        dispatch(busketActionCreators.add(dataItem.id));
+        dispatch(add(dataItem.id));
     };
 
     const increaseCount = () => {
-        dispatch(busketActionCreators.increaseCount(dataItem.id));
+        dispatch(increase(dataItem.id));
     };
 
     const decreaseCount = () => {
-        dispatch(busketActionCreators.decreaseCount(dataItem.id));
+        dispatch(decrease(dataItem.id));
     };
 
     if (count === 0) {

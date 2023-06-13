@@ -3,7 +3,7 @@ import Button from "../../../button/Button";
 import styles from "./CardBusket.module.scss";
 import busketSelectors from "../../../../store/busketReducer/busketSelectors";
 import { useDispatch, useSelector } from "react-redux";
-import busketActionCreators from "../../../../store/busketReducer/busketActionCreators";
+import { decrease, increase, remove } from "../../../../store/busketReducer/busketSlice";
 
 const CardBusket = ({ dataItem }) => {
 
@@ -11,15 +11,15 @@ const CardBusket = ({ dataItem }) => {
     const dispatch = useDispatch();
 
     const increaseCount = () => {
-        dispatch(busketActionCreators.increaseCount(dataItem.id));
+        dispatch(increase(dataItem.id));
     };
 
     const decreaseCount = () => {
-        dispatch(busketActionCreators.decreaseCount(dataItem.id));
+        dispatch(decrease(dataItem.id));
     };
 
     const deleteCount = () => {
-        dispatch(busketActionCreators.deleteCount(dataItem.id));
+        dispatch(remove(dataItem.id));
     };
 
     return (
