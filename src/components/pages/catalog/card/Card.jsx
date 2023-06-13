@@ -3,8 +3,7 @@ import styles from "./Card.module.scss";
 import CardOrder from "./order/CardOrder";
 import pageUrls from "../../../../constants/pageUrls";
 
-const Card = ({ dataItem, dispatch, state }) => {
-    // const [state, dispatch] = useReducer(busketReducer, busketInitialState);
+const Card = ({ dataItem }) => {
 
     return (
         <div className={styles.card}>
@@ -27,11 +26,7 @@ const Card = ({ dataItem, dispatch, state }) => {
                 <div className={styles.description}>
                     {dataItem.description}
                 </div>
-                <CardOrder 
-                    state={state} 
-                    dispatch={dispatch} 
-                    dataItem={dataItem}
-                 />
+                <CardOrder dataItem={dataItem} />
             </div>
         </div>
     );

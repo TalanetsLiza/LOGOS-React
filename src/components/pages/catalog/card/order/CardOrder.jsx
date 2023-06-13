@@ -1,25 +1,30 @@
 import { ReactComponent as IconBuy } from "../../../../../assets/images/icon/Buy.svg";
 import styles from "./CardOrder.module.scss";
-import { ADD, DECREASE_COUNT, INCREASE_COUNT } from "../../../../../reducers/busketReducer/types";
 import Button from "../../../../button/Button";
 import t from "../../../../../assets/translations/translations";
+import { useDispatch, useSelector } from "react-redux";
+import busketActionCreators from "../../../../../store/busketReducer/busketActionCreators";
+import busketSelectors from "../../../../../store/busketReducer/busketSelectors";
 
-const CardOrder = ({ dataItem, dispatch, state, addStyles }) => {
+const CardOrder = ({ dataItem, addStyles }) => {
+    // console.log("render");
+
+    // const busketCountSelector = useMemo(() => busketSelectors.getCount(dataItem.id), [dataItem.id]);
+    // const count = useSelector(busketCountSelector);
+    const count = useSelector(busketSelectors.getCount(dataItem.id));
+    const dispatch = useDispatch();
 
     const addToBusket = () => {
-        dispatch({type: ADD, id: dataItem.id });
+        dispatch(busketActionCreators.add(dataItem.id));
     };
 
     const increaseCount = () => {
-        dispatch({type: INCREASE_COUNT, id: dataItem.id });
+        dispatch(busketActionCreators.increaseCount(dataItem.id));
     };
 
     const decreaseCount = () => {
-        dispatch({type: DECREASE_COUNT, id: dataItem.id });
+        dispatch(busketActionCreators.decreaseCount(dataItem.id));
     };
-
-    const busketItem = state.find((item) => item.id === dataItem.id);
-    const count = busketItem?.count ?? 0;
 
     if (count === 0) {
         return (

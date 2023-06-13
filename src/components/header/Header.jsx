@@ -5,7 +5,7 @@ import Contacts from "./contacts/Contacts";
 import CartButton from "./cartButton/CartButton";
 import MenuBurger from "./menuBurger/MenuBurger";
 
-const Header = ({ busketState }) => {
+const Header = () => {
     return (
         <header className={styles.header}>
             <div className={styles.container}>
@@ -20,7 +20,7 @@ const Header = ({ busketState }) => {
                 </div>
                     <Contacts />
                 <div className={styles.button}>
-                    <CartButton busketState={busketState} />
+                    <CartButton />
                 </div>
             </div>
         </header>

@@ -6,7 +6,7 @@ import CardOrder from "../catalog/card/order/CardOrder";
 import ProductTable from "./productTable/ProductTable";
 import t from "../../../assets/translations/translations";
 
-const ProductPage = ({ state, dispatch }) => {
+const ProductPage = () => {
     const { id } = useParams();
     const navigate = useNavigate();
 
@@ -39,10 +39,8 @@ const ProductPage = ({ state, dispatch }) => {
                         Вес: {dataItem.weight} г.
                     </div>
                     <CardOrder
-                    state={state} 
-                    dispatch={dispatch} 
-                    dataItem={dataItem}
-                    addStyles={styles.count}
+                        dataItem={dataItem}
+                        addStyles={styles.count}
                     />
                     <ProductTable dataItem={dataItem} />
                 </div>

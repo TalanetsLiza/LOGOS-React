@@ -7,7 +7,7 @@ import BannerAbout from "../../bannerAbout/BannerAbout";
 import BannerContact from "../../bannerContact/BannerContact";
 
 
-const CatalogPage = ({dispatch, state}) => {
+const CatalogPage = () => {
     const { category } = useParams();
 
     const data = menuData.filter((menuItem) => menuItem.category.includes(category));
@@ -20,7 +20,7 @@ const CatalogPage = ({dispatch, state}) => {
                 </h2>
                 <div className={styles.container__cards}>
                     {data.map((dataItem) => (
-                        <Card key={dataItem.id} dataItem={dataItem} state={state} dispatch={dispatch} />
+                        <Card key={dataItem.id} dataItem={dataItem} />
                     ))}
                 </div>
             </div>

@@ -6,9 +6,12 @@ import { Link } from "react-router-dom";
 import TotalBusket from "./totalBusket/TotalBusket";
 import menuData from "../../../data/menuData";
 import CardBusket from "./cardBusket/CardBusket";
+import { useSelector } from "react-redux";
 
 
-const BusketPage = ({ state, dispatch }) => {
+const BusketPage = () => {
+
+    const state = useSelector((state) => state.busket.data);
 
     const data = state.map((busketItem) => (
         menuData.find((item) => item.id === busketItem.id)
@@ -43,10 +46,10 @@ const BusketPage = ({ state, dispatch }) => {
             </div>
             <div className={styles.productsBusket}>
                 {data.map((dataItem) => (
-                    <CardBusket key={dataItem.id} dataItem={dataItem} state={state} dispatch={dispatch} />
+                    <CardBusket key={dataItem.id} dataItem={dataItem} />
                 ))}
             </div>
-            <TotalBusket state={state} data={data} />
+            <TotalBusket data={data} />
         </div>
     );
 };

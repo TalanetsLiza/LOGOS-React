@@ -1,23 +1,25 @@
 import t from "../../../../assets/translations/translations";
-import { DECREASE_COUNT, DELETE_COUNT, INCREASE_COUNT } from "../../../../reducers/busketReducer/types";
 import Button from "../../../button/Button";
 import styles from "./CardBusket.module.scss";
+import busketSelectors from "../../../../store/busketReducer/busketSelectors";
+import { useDispatch, useSelector } from "react-redux";
+import busketActionCreators from "../../../../store/busketReducer/busketActionCreators";
 
-const CardBusket = ({ dataItem, state, dispatch }) => {
+const CardBusket = ({ dataItem }) => {
 
-    const busketItem = state.find((item) => item.id === dataItem.id);
-    const count = busketItem?.count ?? 0;
+    const count = useSelector(busketSelectors.getCount(dataItem.id));
+    const dispatch = useDispatch();
 
     const increaseCount = () => {
-        dispatch({type: INCREASE_COUNT, id: dataItem.id });
+        dispatch(busketActionCreators.increaseCount(dataItem.id));
     };
 
     const decreaseCount = () => {
-        dispatch({type: DECREASE_COUNT, id: dataItem.id });
+        dispatch(busketActionCreators.decreaseCount(dataItem.id));
     };
 
     const deleteCount = () => {
-        dispatch({type: DELETE_COUNT, id: dataItem.id });
+        dispatch(busketActionCreators.deleteCount(dataItem.id));
     };
 
     return (

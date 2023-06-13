@@ -1,10 +1,13 @@
 import { Link } from "react-router-dom";
 import styles from "./TotalBusket.module.scss";
 import pageUrls from "../../../../constants/pageUrls";
+import { useSelector } from "react-redux";
 
 
-const TotalBusket = ({ state, data }) => {
+const TotalBusket = ({ data }) => {
     
+    const state = useSelector((state) => state.busket.data)
+
     let totalPrice = 0;
     state.forEach((busketItem) => {
         const menuItem = data.find((item) => item.id === busketItem.id);
