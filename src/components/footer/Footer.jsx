@@ -5,7 +5,7 @@ import Links from "./links/Links";
 import NavigationFooter from "./navigationFooter.jsx/NavigationFooter";
 import Weather from "./weather/Weather";
 
-const Footer = ({ weather }) => {
+const Footer = () => {
     return (
         <footer className={styles.footer}>
             <div className={styles.container}>
@@ -17,7 +17,7 @@ const Footer = ({ weather }) => {
                     <Links />                    
                 </div>
                 <NavigationFooter />
-                <Weather weather={weather}/>
+                <Weather />
             </div>
         </footer>
     );
