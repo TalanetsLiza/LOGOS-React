@@ -1,20 +1,25 @@
 import { useNavigate, useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
 import { ReactComponent as BackIcon } from "../../../assets/images/icon/back.svg";
 import styles from "./ProductPage.module.scss";
-import menuData from "../../../data/menuData";
 import CardOrder from "../catalog/card/order/CardOrder";
 import ProductTable from "./productTable/ProductTable";
 import t from "../../../assets/translations/translations";
 
+
 const ProductPage = () => {
     const { id } = useParams();
     const navigate = useNavigate();
+    const menuData = useSelector((state) => state.menu.data);
 
     const back = () => {
         navigate(-1);
     };
-
+    
     const dataItem = menuData.find((data) => data.id === +id);
+    if (!dataItem) {
+        return null;
+    }
 
     return (
         <div className={styles.container}>

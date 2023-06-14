@@ -1,0 +1,276 @@
+{
+    "menu": [
+        {
+            "id": 1,
+            "category": ["cold-snacks", "hot-snacks", "signature-dishes", "meat-dishes"],
+            "title": "Ягненок",
+            "description": "Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком",
+            "weight": 225,
+            "price": 620,
+            "image": {
+                "src": "/assets/images/menu/lamb.png",
+                "alt": "food"
+            },
+            "proteins": 17.73,
+            "fats": 7.63,
+            "carbohydrates": 22.35,
+            "kilocalories": 240
+        },
+        {
+            "id": 2,
+            "category": ["cold-snacks", "hot-snacks", "meat-dishes"],
+            "title": "Индейка",
+            "description": "Фаршированный гречневой кашей, курагой, апельсином и зеленым яблоком",
+            "weight": 225,
+            "price": 450,
+            "image": {
+                "src": "/assets/images/menu/turkey.png",
+                "alt": "food"
+            },
+            "proteins": 17.73,
+            "fats": 7.63,
+            "carbohydrates": 22.35,
+            "kilocalories": 240
+        },
+        {
+            "id": 3,
+            "category": ["cold-snacks", "hot-snacks", "meat-dishes", "grill-menu"],
+            "title": "Гусь",
+            "description": "Фаршированный яблоками и апельсинами. Подается с салатом",
+            "weight": 225,
+            "price": 7900,
+            "image": {
+                "src": "/assets/images/menu/goose.png",
+                "alt": "food"
+            },
+            "proteins": 17.73,
+            "fats": 7.63,
+            "carbohydrates": 22.35,
+            "kilocalories": 240
+        },
+        {
+            "id": 4,
+            "category": ["cold-snacks", "hot-snacks", "meat-dishes", "signature-dishes"],
+            "title": "Утка",
+            "description": "Фаршированная рисом, курагой и айвой",
+            "weight": 225,
+            "price": 3230,
+            "image": {
+                "src": "/assets/images/menu/duck.png",
+                "alt": "food"
+            },
+            "proteins": 17.73,
+            "fats": 7.63,
+            "carbohydrates": 22.35,
+            "kilocalories": 240
+        },
+        {
+            "id": 5,
+            "category": ["soups", "hot-snacks"],
+            "title": "Суп солянка",
+            "description": "Пикантный суп с ветчиной и маслинами",
+            "weight": 250,
+            "price": 3230,
+            "image": {
+                "src": "/assets/images/menu/soup-solyanka.jpg",
+                "alt": "food"
+            },
+            "proteins": 17.73,
+            "fats": 7.63,
+            "carbohydrates": 22.35,
+            "kilocalories": 240
+        },
+        {
+            "id": 6,
+            "category": ["soups", "hot-snacks"],
+            "title": "Суп с лапшой",
+            "description": "Изысканный суп с рисовой лапшой и зеленью",
+            "weight": 320,
+            "price": 650,
+            "image": {
+                "src": "/assets/images/menu/soup-lapha.jpg",
+                "alt": "food"
+            },
+            "proteins": 17.73,
+            "fats": 7.63,
+            "carbohydrates": 22.35,
+            "kilocalories": 240
+        },
+        {
+            "id": 7,
+            "category": ["soups", "hot-snacks", "signature-dishes", "cold-snacks"],
+            "title": "Тыквенный суп",
+            "description": "Тыквенный суп-пюре с креветками и зеленью",
+            "weight": 325,
+            "price": 1200,
+            "image": {
+                "src": "/assets/images/menu/soup-pumpkin.jpg",
+                "alt": "food"
+            },
+            "proteins": 17.73,
+            "fats": 7.63,
+            "carbohydrates": 22.35,
+            "kilocalories": 240
+        },
+        {
+            "id": 8,
+            "category": ["soups", "hot-snacks"],
+            "title": "Томатный суп",
+            "description": "Нежный томатный суп с говядиной. Подается с брускетами",
+            "weight": 300,
+            "price": 1350,
+            "image": {
+                "src": "/assets/images/menu/soup-tamatni.jpg",
+                "alt": "food"
+            },
+            "proteins": 17.73,
+            "fats": 7.63,
+            "carbohydrates": 22.35,
+            "kilocalories": 240
+        },
+        {
+            "id": 9,
+            "category": ["fish-dishes", "hot-snacks", "grill-menu", "signature-dishes"],
+            "title": "Филе форель",
+            "description": "С салатом из шпината и соте томатов в кунжутно-соевом соусе",
+            "weight": 450,
+            "price": 4200,
+            "image": {
+                "src": "/assets/images/menu/fish-trout.jpg",
+                "alt": "food"
+            },
+            "proteins": 17.73,
+            "fats": 7.63,
+            "carbohydrates": 22.35,
+            "kilocalories": 240
+        },
+        {
+            "id": 10,
+            "category": ["fish-dishes", "hot-snacks", "grill-menu"],
+            "title": "Филе лосося",
+            "description": "Запеченное под лимонным соусом, дополненное дольками лимона и отварным рисом",
+            "weight": 350,
+            "price": 3700,
+            "image": {
+                "src": "/assets/images/menu/salmon-steak.jpg",
+                "alt": "food"
+            },
+            "proteins": 17.73,
+            "fats": 7.63,
+            "carbohydrates": 22.35,
+            "kilocalories": 240
+        },
+        {
+            "id": 11,
+            "category": ["fish-dishes", "hot-snacks", "cold-snacks"],
+            "title": "Морепродукты",
+            "description": "Нежные мидии, ккеветки и устрицы под лимонным соусом",
+            "weight": 450,
+            "price": 4800,
+            "image": {
+                "src": "/assets/images/menu/seafood.jpg",
+                "alt": "food"
+            },
+            "proteins": 17.73,
+            "fats": 7.63,
+            "carbohydrates": 22.35,
+            "kilocalories": 240
+        },
+        {
+            "id": 12,
+            "category": ["fish-dishes", "hot-snacks", "grill-menu"],
+            "title": "Карп",
+            "description": "Фаршированная лимоном и апельсином, подоется с салатом",
+            "weight": 450,
+            "price": 1600,
+            "image": {
+                "src": "/assets/images/menu/stuffed-carp.jpg",
+                "alt": "food"
+            },
+            "proteins": 17.73,
+            "fats": 7.63,
+            "carbohydrates": 22.35,
+            "kilocalories": 240
+        },
+        {
+            "id": 13,
+            "category": ["drinks"],
+            "title": "Кофе",
+            "description": "Кофе в ассортименте",
+            "weight": 250,
+            "price": 250,
+            "image": {
+                "src": "/assets/images/menu/coffe.jpg",
+                "alt": "drink"
+            },
+            "proteins": 17.73,
+            "fats": 7.63,
+            "carbohydrates": 22.35,
+            "kilocalories": 240
+        },
+        {
+            "id": 14,
+            "category": ["drinks"],
+            "title": "Чай",
+            "description": "Чай в ассортименте",
+            "weight": 250,
+            "price": 250,
+            "image": {
+                "src": "/assets/images/menu/tea.jpg",
+                "alt": "drink"
+            },
+            "proteins": 17.73,
+            "fats": 7.63,
+            "carbohydrates": 22.35,
+            "kilocalories": 240
+        },
+        {
+            "id": 15,
+            "category": ["drinks", "cold-snacks"],
+            "title": "Смузи",
+            "description": "Свежевыжатые соки и смузи в ассортименте",
+            "weight": 200,
+            "price": 300,
+            "image": {
+                "src": "/assets/images/menu/juice.jpg",
+                "alt": "drink"
+            },
+            "proteins": 17.73,
+            "fats": 7.63,
+            "carbohydrates": 22.35,
+            "kilocalories": 240
+        },
+        {
+            "id": 16,
+            "category": ["drinks"],
+            "title": "Горячие коктели",
+            "description": "Горячие напитки в ассортименте",
+            "weight": 250,
+            "price": 250,
+            "image": {
+                "src": "/assets/images/menu/hot-drinks.jpg",
+                "alt": "drink"
+            },
+            "proteins": 17.73,
+            "fats": 7.63,
+            "carbohydrates": 22.35,
+            "kilocalories": 240
+        },
+        {
+            "id": 17,
+            "category": ["drinks", "cold-snacks"],
+            "title": "Алкогольные напитки",
+            "description": "Алкогольные напитки в ассортименте",
+            "weight": 250,
+            "price": 300,
+            "image": {
+                "src": "/assets/images/menu/alcoholic-drinks.jpg",
+                "alt": "drink"
+            },
+            "proteins": 17.73,
+            "fats": 7.63,
+            "carbohydrates": 22.35,
+            "kilocalories": 240
+        }
+    ]
+}

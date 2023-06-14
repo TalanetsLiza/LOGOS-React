@@ -13,28 +13,16 @@ import DeliveryPage from "./pages/delivery/DeliveryPage";
 import AboutPage from "./pages/about/AboutPage";
 import Ordering from "./pages/busket/ordering/Ordering";
 import ProductPage from "./pages/product/ProductPage";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { fetchMenu } from "../store/menu/menuSlice";
 
 const App = () => {
+    const dispatch = useDispatch();
 
-    // useEffect( () => {
-    //     setIsPreloader(true);
-
-    //     setTimeout(() => {
-    //         fetch("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m")
-    //             .then(response => response.json())
-    //             .then((data) => {
-    //                 const dataWeather = {
-    //                     city: "Warszawa",
-    //                     temperature: data.current_weather.temperature,
-    //                     units: data.hourly_units.temperature_2m,
-    //                     time: data.current_weather.time,
-    //                 }
-    //                 setWeather(dataWeather);
-    //             })
-    //             .finally(() => setIsPreloader(false));
-    //     }, 10)  
-    // },[])
-    
+    useEffect( () => {
+        dispatch(fetchMenu());
+    }, []);    
 
     const catalogByCategoryPath = `${pageUrls.catalog}/:category`;
     

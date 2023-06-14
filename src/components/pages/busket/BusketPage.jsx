@@ -4,18 +4,19 @@ import { ReactComponent as BackIcon } from "../../../assets/images/icon/back.svg
 import pageUrls from "../../../constants/pageUrls";
 import { Link } from "react-router-dom";
 import TotalBusket from "./totalBusket/TotalBusket";
-import menuData from "../../../data/menuData";
 import CardBusket from "./cardBusket/CardBusket";
 import { useSelector } from "react-redux";
 
 
 const BusketPage = () => {
+    const menuData = useSelector((state) => state.menu.data);
+    const busketData = useSelector((state) => state.busket.data);
 
-    const state = useSelector((state) => state.busket.data);
-
-    const data = state.map((busketItem) => (
-        menuData.find((item) => item.id === busketItem.id)
-    ));   
+    const data = busketData
+        .map((busketItem) => (
+            menuData.find((item) => item.id === busketItem.id)
+        ))
+        .filter((dataItem) => dataItem);
     
     if(data.length === 0) {
         return (
