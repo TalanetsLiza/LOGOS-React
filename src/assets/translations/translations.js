@@ -17,6 +17,9 @@ const t = {
     busketPage: {
         name: "Корзина",
     },
+    deliveryPage: {
+        name: "Условия доставки",
+    },
     ordering: {
         name: "Оформление заказа",
     },
