@@ -1,9 +1,24 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
+const getGeolocation = () => {
+    return new Promise((resolve, reject) => navigator.geolocation.getCurrentPosition(resolve, reject));
+};
+
+const getFetch = async(latitude, longitude) => {
+    const response = await fetch(`https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m`);
+    return response.json();
+}
+
 export const getWeather = createAsyncThunk("weather/getWeather",
     async () => {
-        const responce = await fetch("https://api.open-meteo.com/v1/forecast?latitude=52.52&longitude=13.41&current_weather=true&hourly=temperature_2m,relativehumidity_2m,windspeed_10m");
-        return await responce.json();
+        try {
+            const position = await getGeolocation();
+            const {latitude, longitude} = position.coords;
+            return getFetch(latitude, longitude); 
+        }
+        catch (error){
+            return getFetch(52.22, 13.42);
+        }
     }
 );
 
